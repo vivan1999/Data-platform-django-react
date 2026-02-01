@@ -1,0 +1,33 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.3.6">
+  <diagram name="Page-1" id="I5keizEcNxg-_TArs_mC">
+    <mxGraphModel dx="2385" dy="644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JCa04-dT-iLfWev0Cdha-7" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="" vertex="1">
+          <mxGeometry height="360" width="230" x="330" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="JCa04-dT-iLfWev0Cdha-10" parent="1" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" value="Relational&amp;nbsp;&lt;div&gt;Database&lt;br&gt;&lt;br&gt;&lt;div&gt;Postgres&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="100" x="395" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="JCa04-dT-iLfWev0Cdha-14" edge="1" parent="1" source="JCa04-dT-iLfWev0Cdha-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-730" y="342" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JCa04-dT-iLfWev0Cdha-11" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="USER" vertex="1">
+          <mxGeometry height="290" width="130" x="-1080" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="JCa04-dT-iLfWev0Cdha-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;rotation=90;" value="" vertex="1">
+          <mxGeometry height="167.5" width="435" x="-860" y="306.25" as="geometry" />
+        </mxCell>
+        <mxCell id="JCa04-dT-iLfWev0Cdha-13" parent="1" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" value="API&lt;div&gt;Gateway&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="-692.5" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="ugxRloJpWwTuapbBTm9a-5" parent="1" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" value="1. From where data is coming&lt;br&gt;&amp;nbsp;from.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. What data looks like.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3. Who will need access to it.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="380" width="310" x="750" y="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

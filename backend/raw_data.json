@@ -1,0 +1,69 @@
+{
+    "readings":[
+        {
+            "device_id": "device_001",
+            "device_type": "smart_meter",
+            "location": "London-Substation-12",
+            "timestamp": "2026-01-30T10:15:00Z",
+            "metric_name": "voltage",
+            "metric_value": 231.4,
+            "raw_payload": {
+                "phase": "A",
+                "unit": "V",
+                "quality_flag": "GOOD"
+            }
+        },
+        {
+            "device_id": "device_001",
+            "device_type": "smart_meter",
+            "location": "London-Substation-12",
+            "timestamp": "2026-01-30T10:16:00Z",
+            "metric_name": "voltage",
+            "metric_value": 221.24,
+            "raw_payload": {
+                "phase": "A",
+                "unit": "V",
+                "quality_flag": "GOOD"
+            }
+        },
+        {
+            "device_id": "device_002",
+            "device_type": "sensor",
+            "location": "manchester-01",
+            "timestamp": "2026-01-30T12:11:00Z",
+            "metric_name": "current",
+            "metric_value": 201.24,
+            "raw_payload": {
+                "phase": "D",
+                "unit": "V",
+                "quality_flag": "GOOD"
+            }
+        },
+        {
+            "device_id": "device_002",
+            "device_type": "sensor",
+            "location": "manchester-01",
+            "timestamp": "2026-01-30T12:13:00Z",
+            "metric_name": "voltage",
+            "metric_value": 224.22,
+            "raw_payload": {
+                "phase": "B",
+                "unit": "C",
+                "quality_flag": "BAD"
+            }
+        },
+        {
+            "device_id": "device_002",
+            "device_type": "sensor",
+            "location": "manchester-01",
+            "timestamp": "2026-01-30T12:14:00Z",
+            "metric_name": "voltage",
+            "metric_value": 227.03,
+            "raw_payload": {
+                "phase": "B",
+                "unit": "C",
+                "quality_flag": "BAD"
+            }
+        }
+    ]
+}
