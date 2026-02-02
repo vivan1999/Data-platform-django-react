@@ -32,7 +32,7 @@ class Command(BaseCommand):
         with transaction.atomic():
             for item in readings:
                 device_id = item["device_id"]
-                device, device_created = Device.objects.get_or_create(device_id = device_id,defaults={
+                device, device_created = Device.objects.get_or_create(device_id = device_id, name = device_id, defaults={
                     "type": item.get("device_type","smart_meter"),
                     "location": item.get("location",None)
                 })
