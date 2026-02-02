@@ -1,2 +1,11 @@
+#python cpy files
+**/__pycache__/
+**/*.py[cod]
+*.pyo
+
+#Django 
+
+
+#virtual env
 .env
 env
