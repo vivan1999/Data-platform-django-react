@@ -3,3 +3,5 @@ django-rest-framework
 dotenv
 psycopg2
 django-cors-headers
+djangorestframework-simplejwt
+djoser

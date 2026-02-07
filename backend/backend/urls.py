@@ -16,10 +16,12 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path,include,re_path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("devices/",include("apps.readings.urls")),
-    path("users/",include("apps.contacts.urls"))
+    re_path("auth/", include('djoser.urls')),
+    re_path("auth/", include('djoser.urls.jwt')), # for jwt auth URL's of djoser -> create, refresh, verify
+    path("v1/users/",include("apps.contacts.urls"))
 ]
