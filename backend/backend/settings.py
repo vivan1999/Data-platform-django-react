@@ -31,7 +31,41 @@ DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
 
+# Custom USER
 AUTH_USER_MODEL = "contacts.User"
+
+####### DJOSER AUTH SETTINGS ############
+
+# Djoser auth JWT Authentication backend 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication', # dont remove this comma tuple with single element in it needs comma
+    ),
+}
+SIMPLE_JWT = {
+   'AUTH_HEADER_TYPES': ('JWT',),
+}
+
+
+# Djoser settings for auth
+DJOSER = {
+    "LOGIN_FIELD": "email",
+    "PASSWORD_RESET_CONFIRM_URL": "password/reset/confirm/{uid}/{token}", #URL to your frontend password reset page. It should contain {uid} and {token} placeholders, e.g. #/password-reset/{uid}/{token}. You should pass uid and token to reset password confirmation endpoint.
+    "PASSWORD_CHANGED_EMAIL_CONFIRMATION": True,
+    "USERNAME_CHANGED_EMAIL_CONFIRMATION": True,
+    "USER_CREATE_PASSWORD_RETYPE": True,
+    "SEND_CONFIRMATION_EMAIL": True,
+    "ACTIVATION_URL": "activation/{uid}/{token}",
+    "SEND_ACTIVATION_EMAIL": True,
+    "SERIALIZERS": {
+        "user_create": "djoser.serializers.UserCreateSerializer",
+        'user': 'djoser.serializers.UserCreateSerializer',
+        'user_delete': 'djoser.serializers.UserDeleteSerializer',
+    }
+}
+
+
+############# EMAIL Settings ##########
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
@@ -144,8 +178,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = "static/"
+
+# Static folder directory setting for Email templates of anything from react
 STATICFILES_DIRS = [os.path.join(BASE_DIR,"build/static")]
 STATIC_ROOT = os.path.join(BASE_DIR,"static")
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

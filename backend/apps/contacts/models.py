@@ -35,7 +35,8 @@ class User(AbstractBaseUser,PermissionsMixin,BaseUserManager):
     modified_at = models.DateTimeField(auto_now= True)
 
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = [email, first_name]
+    REQUIRED_FIELDS = ["first_name"]
+    objects = UserAccountManager()
 
     def get_full_name(self):
         return self.first_name + " " + self.last_name
