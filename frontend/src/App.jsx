@@ -6,26 +6,32 @@ import Signup from './screens/Signup'
 import "./app.css"
 import ResetPassword from "./screens/ResetPassword"
 import ResetPasswordConfirm from "./screens/ResetPasswordConfirm"
+import PrivateRoutes from "./hocs/PrivateRoutes"
+import { AuthProvider } from "./hocs/AuthProvider"
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Homepage />}>
-          </Route>
-          <Route path="/login" element={<Login />}>
-          </Route>
-          <Route path="/signup" element={<Signup />}>
-          </Route>
-          <Route path="/reset-password" element={<ResetPassword />}>
-          </Route>
-          <Route path="/password/reset/confirm/:uid/:token" element={<ResetPasswordConfirm />}>
-          </Route>
-        </Routes>
-      </Layout>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route element={<PrivateRoutes />}>
+              <Route path="/" element={<Homepage />}>
+              </Route>
+            </Route>
+            <Route path="/login" element={<Login />}>
+            </Route>
+            <Route path="/signup" element={<Signup />}>
+            </Route>
+            <Route path="/reset-password" element={<ResetPassword />}>
+            </Route>
+            <Route path="/password/reset/confirm/:uid/:token" element={<ResetPasswordConfirm />}>
+            </Route>
+          </Routes>
+        </Layout>
+      </BrowserRouter >
+    </AuthProvider>
   )
 }
 
